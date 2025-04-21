@@ -294,3 +294,42 @@ button:hover {
     transform: scale(1.1);
   }
   
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #001f3f;
+    padding: 10px 0;
+    z-index: 999;
+    text-align: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #00aced;
+  }
+  
+  #resources {
+    padding: 60px 20px;
+  }
+  
+  .resource-item {
+    margin-bottom: 40px;
+  }
+  
