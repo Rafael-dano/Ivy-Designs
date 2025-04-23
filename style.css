@@ -326,10 +326,42 @@ button:hover {
   }
   
   #resources {
-    padding: 60px 20px;
+    padding: 60px 30px;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subheadline {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
   }
   
   .resource-item {
-    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid #001f3f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .resource-item h3 {
+    font-size: 1.3rem;
+    color: #001f3f;
+  }
+  
+  .resource-item p {
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #333;
   }
   
