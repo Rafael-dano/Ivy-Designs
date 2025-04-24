@@ -12,6 +12,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   <!-- ✅ Favicons (corrected paths) -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
@@ -26,6 +28,12 @@
   <meta property="og:image" content="images/og-preview.jpg" />
   <meta property="og:url" content="https://yourportfolio.com" />
   <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ivy Web Designs | Professional Web Developer" />
+<meta name="twitter:description" content="Need a website? I can create modern, responsive, and high-converting websites for a low price." />
+<meta name="twitter:image" content="images/og-preview.jpg" />
+
 </head>
 <body>
     <nav class="navbar">
@@ -45,11 +53,15 @@
         <section id="hero">
             <div class="hero-container">
                 <div class="hero-text">
-                    <h1>Ivy Web Designs</h1>
+                    <h1 id="headline-carousel" class="headline-text">Custom Web Design!</h1>
                     <p class="tagline"><strong>Take control</strong> — don’t rent space on the internet.</p>
                     <p class="subtext">Own your Platform! Build your Brand!</p>
-                    <a href="#contact" class="cta-button">Work With Me</a>
-                    <p class="email">📩 rafaelagredano99@gmail.com</p>
+                    <a href="#contact" class="pulse-button btn btn-primary cta-button">Work With Me</a>
+                    <p class="email">
+                        <span id="copyEmail" style="cursor: pointer; color: #007BFF; text-decoration: underline;">
+                         📩 Rafaelagredano99@gmail.com
+                        </span>
+                    </p>
                 </div>
                 <div class="hero-image">
                     <img src="images/profile.jpg" alt="Your Professional Photo">
@@ -68,36 +80,44 @@
               <div class="badge-icon"><img src="./images/badges/express.svg" alt="Express" /><span>Express</span></div>
               <div class="badge-icon"><img src="./images/badges/mongodb.svg" alt="MongoDB" /><span>MongoDB</span></div>
             </div>
-          </section>                
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <div class="project-text">
+        </section>                
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card">
+                <div class="project-info">
                     <h3>Horiseon</h3>
                     <p>This was a school project where I created a simple yet modern landing page with 5 different sections.</p>
                     <p>The perfect example of this is the page you are currently scrolling on. This design was created by Ivy Web Designs</p>
-                    <p><strong>Tools</strong></p>
-                    <ui><li>HTML</li><li>CSS</li><li>JavaScript</li></ui>
+                    <a href="case-studies/horiseon.html" class="case-study-link">View Case Study</a>
                 </div>
                 <img src="images/project1.jpg" alt="Project 1" class="project-img">
             </div>
-            <div class="project reverse">
-                <img src="images/project2.jpg" alt="Project 2" class="project-img">
-                <div class="project-text">
-                    <h3>Real Estate site</h3>
-                    <p>This is a Multi-page site with animation, interactivity and a polished look. It also includes contact forms, API integration, hero slide and a a hero’s section. </p>
-                    <p><strong>Tools</strong></p>
-                    <ui><li>HTML,CSS<li>React</li><li>Bootstrap</li><li>Node.js</li></ui>
+            <div class="project-card">
+                <div class="project-video">
+                  <video controls poster="images/real-estate-thumbnail.jpg">
+                    <source src="videos/real-estate-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
+                <div class="project-info">
+                  <h3>Commercial Real Estate Website</h3>
+                  <p>A sleek, responsive website for real estate agents, featuring listings, a homepage carousel, and contact form.</p>
+                  <a href="case-studies/real-estate.html" class="case-study-link">View Case Study</a>
+                </div>
+              </div>
             </div>
-            <div class="project">
-                <div class="project-text">
+            <div class="project-card">
+                <div class="project-video">
+                    <video controls poster="images/real-estate-thumbnail.jpg">
+                      <source src="videos/real-estate-demo.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-info">
                     <h3>Gsharp</h3>
                     <p>advanced custom design music site with multiple pages that only allows you only if registered, once logged in you can upload music to share with other users. Plays uploaded song on the site when clicked. also has the capabilities to like and comment.</p>
-                    <p><strong>Tools</strong></p>
-                    <ui><li>React</li><li>Node.js</li><li>MongoDB</li><li>JWT</li><li>Render</li></ui>
+                    <a href="case-studies/gsharp.html" class="case-study-link">View Case Study</a>
                 </div>
-                <img src="images/project3.jpg" alt="Project 3" class="project-img">
             </div>
         </section>        
         <section id="services">
@@ -123,8 +143,8 @@
                         <p>✔ Basic SEO Setup - Helps your site
                         appear on Google.</p>
                         <p>✔ 1-2 Free Revision.</p>
-                        <p>�� Best for: small businesses, freelancers,
-                        personal websites, and portfolios.</p>
+                        <p>💡 Best for: Small Businesses, Freelancers,
+                        Personal Websites, and Portfolios.</p>
                     <p><strong>$500-$1500</strong></p>
                 </div>
                 <div class="service">
@@ -149,8 +169,8 @@
                         loading and better user experience</p>
                         <p>✔ 3 Free Revisions - Three rounds of
                         adjustments included</p>
-                        <p>�� Best for: Real estate agents, service
-                        providers, and businesses looking to grow.</p>
+                        <p>💡 Best for: Service
+                        Providers, and businesses looking to grow.</p>
                     <p><strong>$1500-$5000</strong></p>
                 </div>
                 <div class="service">
@@ -177,9 +197,8 @@
                         and attract organic traffic</p>
                     <p>✔ E-commerce Features</p>
                     <p>✔ 5 Free Revisions</p>
-                    <p>�� Best for: large businesses, real estate
-                        firms, e-commerce stores, and custom web
-                        apps.</p>
+                    <p>💡 Best for: large Businesses, Firms, E-Commerce Stores, and Custom Web
+                        Apps.</p>
                     <p><strong>$5,000+</strong></p>
                 </div>
             </div>
@@ -202,18 +221,22 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>  
-        <section id="about">
+        <section id="about" data-aos="fade-up" data-aos-duration="1000">
             <div class="about-container">
-                <img src="images/profile.jpg" alt="Rafael Agredano" class="about-img"> <!--change the url for the image when i choice the image i want -->
-                <div class="about-text">
+                <img src="images/profile.jpg" alt="Rafael Agredano" class="about-img" data-aos="zoom-in" data-aos-delay="200"> 
+                <div class="about-text" data-aos="fade-left" data-aos-delay="400">
                     <h2>About Me</h2>
-                    <p>I'm Rafael E. Agredano III. My son is the Forth and in roman numerals that is IV, giving inspiration for the name IVY Web Designs. </p>
-                    <p> I am a passionate Web Designer and Developer from San Antonio, Texas. I create clean, modern, and user-friendly websites for clients. So Instead of a cookie cutter template, And AI using your information.... come get your custom webdesign with me, and keep your information safe!!! </p>
+                    <p>I'm Rafael E. Agredano III. My son is the Forth and in roman numerals that is IV, giving inspiration for the name IVY Web Designs.</p>
+                    <p>I am a passionate Web Designer and Developer from San Antonio, Texas. I create clean, modern, and user-friendly websites for clients. So instead of a cookie cutter template, and AI using your information... come get your custom web design with me, and keep your information safe!!!</p>
                     <p>Let's build something amazing together!</p>
-                    <p>Rafaelagredano99@gmail.com</p>
+                    <p>Email: 
+                        <span id="copyEmail" style="cursor: pointer; color: #007BFF; text-decoration: underline;">
+                          Rafaelagredano99@gmail.com
+                        </span>
+                    </p>
                 </div>
             </div>
-        </section>       
+        </section>              
     </main>
     <footer>
         <p>&copy; 2025 Ivy Web Designs</p>
@@ -221,5 +244,10 @@
              <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3B%2FrQMCEHTR5ehnSCBAAc90A%3D%3D">LinkedIn</a></p>
         <p>C.E.O.N. lets "Create Everything Outta Nothing"</p>
     </footer>
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
