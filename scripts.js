@@ -41,7 +41,7 @@ const contactForm = document.getElementById('contact-form');
       const message = document.getElementById('message').value;
 
       try {
-        const response = await fetch('https://YOUR-SERVER-URL/send', {
+        const response = await fetch('https://ivy-email-server.onrender.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
