@@ -30,11 +30,39 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(rotateHeadline, 3000);
 });
 
+const contactForm = document.getElementById('contact-form');
 
-document.getElementById("copyEmail").addEventListener("click", function () {
-  navigator.clipboard.writeText("rafaelagredano99@gmail.com");
-  alert("Email copied to clipboard!");
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      try {
+        const response = await fetch('https://YOUR-SERVER-URL/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        } else {
+          alert('Failed to send message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again later.');
+      }
+    });
+  }
 });
-
 
 
